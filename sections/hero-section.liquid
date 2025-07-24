@@ -1,0 +1,189 @@
+<section class="custom-hero-section-top">
+  <div class="page-width page-width-desktop">
+  <div class="custom-hero-section-top__container ">
+    {% if section.settings['hero-main-haeding'] != blank %}
+      <h1 class="custom-hero-section__top-title">{{ section.settings['hero-main-haeding'] }}</h1>
+    {% endif %}
+
+    {% if section.settings['hero-main-description'] != blank %}
+      <p class="custom-hero-section__top-description">{{ section.settings['hero-main-description'] }}</p>
+    {% endif %}
+
+    {% if section.settings['hero-main-top-button-link'] != blank %}
+      <a class="custom-hero-section__top-button" herf="{{ section.settings.hero-main-top-button-link }}">
+        {{- section.settings['hero-main-top-button'] -}}
+      </a>
+    {% endif %}
+  </div>
+    </div>
+</section>
+
+<section class="custom-hero-section">
+  <div class="custom-hero-section__container page-width page-width-desktop">
+    <div class="custom-hero-section__column">
+      {% if section.settings['hero-images'] != blank %}
+        <img
+          class="custom-hero-section__left-block--image"
+          src="{{ section.settings.hero-images | img_url: 'large' }}"
+          alt=""
+        >
+      {% endif %}
+      <div class="hero-button">
+      {% if section.settings.heading != blank %}
+        <h3 class="custom-hero-section__left-block--title">{{ section.settings.heading }}</h3>
+      {% endif %}
+
+      {% if section.settings['button-url-1'] != blank %}
+        
+        <a class="custom-hero-section__left-block--button" href="{{ section.settings.button-url-1 }}">
+          {{ section.settings['button-text-1'] }}
+        </a>
+       
+      {% endif %}
+       </div>
+    </div>
+
+    <div class="custom-hero-section__column">
+      {% if section.settings['hero-images-2'] != blank %}
+        <img
+          class="custom-hero-section__left-block--image"
+          src="{{ section.settings.hero-images-2 | img_url: 'large' }}"
+          alt=""
+        >
+      {% endif %}
+      <div class="custom-hero-section__right-column-text">
+        {% if section.settings.heading_2 != blank %}
+          <h3 class="custom-hero-section__left-block--title">{{ section.settings.heading_2 }}</h3>
+        {% endif %}
+
+        {% if section.settings['button-url-2'] != blank %}
+          <a class="custom-hero-section__left-block--button" href="{{ section.settings.button-url-2 }}">
+            {{ section.settings['button-text-1'] }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="custom-hero-section__column">
+      {% if section.settings['hero-images-3'] != blank %}
+        <img
+          class="custom-hero-section__left-block--image"
+          src="{{ section.settings.hero-images-3 | img_url: 'large' }}"
+          alt=""
+        >
+      {% endif %}
+
+      <div class="custom-hero-section__right-column-text">
+        {% if section.settings.heading_3 != blank %}
+          <h3 class="custom-hero-section__left-block--title">{{ section.settings.heading_3 }}</h3>
+        {% endif %}
+
+        {% if section.settings['button-url-3'] != blank %}
+          <a class="custom-hero-section__left-block--button" href="{{ section.settings.button-url-3 }}">
+            {{ section.settings['button-text-2'] }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero section",
+  "settings": [
+    {
+      "id": "hero-main-haeding",
+      "type": "text",
+      "label": "Hero Section Title"
+    },
+    {
+      "id": "hero-main-description",
+      "type": "text",
+      "label": "Hero Section Decription"
+    },
+    {
+      "id": "hero-main-top-button-link",
+      "type": "url",
+      "label": "Main Top Button Link"
+    },
+    {
+      "id": "hero-main-top-button",
+      "type": "text",
+      "label": "Main Top Button"
+    },
+    {
+      "id": "hero-images",
+      "type": "image_picker",
+      "label": "Hero Image 1"
+    },
+    {
+      "id": "heading",
+      "type": "text",
+      "label": "Heading 1"
+    },
+    {
+      "id": "button-url-1",
+      "type": "url",
+      "label": "Button link 1"
+    },
+    {
+      "id": "button-text-1",
+      "type": "text",
+      "label": "Button 1"
+    },
+    {
+      "id": "hero-images-2",
+      "type": "image_picker",
+      "label": "Hero Image 2"
+    },
+    {
+      "id": "heading_2",
+      "type": "text",
+      "label": "Heading 2"
+    },
+    {
+      "id": "button-url-2",
+      "type": "url",
+      "label": "Button link 2"
+    },
+    {
+      "id": "button-text-2",
+      "type": "text",
+      "label": "Button 2"
+    },
+    {
+      "id": "hero-images-3",
+      "type": "image_picker",
+      "label": "Hero Image 3"
+    },
+    {
+      "id": "heading_3",
+      "type": "text",
+      "label": "Heading 3"
+    },
+    {
+      "id": "button-url-3",
+      "type": "url",
+      "label": "Button link 3"
+    },
+    {
+      "id": "button-text-3",
+      "type": "text",
+      "label": "Button 3"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero section",
+      "category": "ADVANCED LAYOUT"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

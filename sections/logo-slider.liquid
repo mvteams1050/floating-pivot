@@ -1,0 +1,165 @@
+<div id="logo-slider" class="custom-logo-slider-main">
+  <div class="page-width custom-text-slider-inner">
+    <div class="custom-logo-slider-single">
+      {% for block in section.blocks %}
+        <div class="text">
+          {% if  block.settings.icon_image!=blank %}
+          <img class="icon" src="{{ block.settings.icon_image | img_url: 'large' }}">
+            {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+  #logo-slider .custom-logo-slider-single .slick-slide img {
+    margin-inline: auto;
+    width: 80%;
+    height: 85px;
+    object-fit: contain;
+  }
+  
+  .slick-slide img {
+    margin-inline: auto;
+  }
+
+  .slick-slide div {
+    display: flex;
+  }
+
+  .custom-logo-slider-main {
+    background-color: #f6f6f6;
+    padding-block: 60px;
+    margin-top: 75px;
+  }
+
+  .slick-list {
+    max-width: 1126px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .slick-prev {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .slick-next {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @media (max-width: 1024px) {
+    .slick-prev {
+      left: -12px;
+    }
+
+    .slick-next {
+      right: -12px;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    font-size: 0;
+    border: 0;
+    background-color: transparent;
+  }
+
+  .slick-prev::before {
+    content: '';
+    width: 35px;
+    height: 35px;
+    display: block;
+    background-image: url('/cdn/shop/files/slider_previous_large.svg?v=1690363191');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    position: relative;
+  }
+
+  .slick-next::before {
+    content: '';
+    width: 35px;
+    height: 35px;
+    display: block;
+    background-image: url('/cdn/shop/files/slider_next_large.svg?v=1690363193');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+  }
+</style>
+
+<script>
+  $('.custom-logo-slider-single').slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    draggable: true,
+    pauseOnHover: true,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 481,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+</script>
+{% schema %}
+{
+  "name": "Logo Slider",
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "SVG icon"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo Slider",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

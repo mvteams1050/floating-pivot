@@ -1,0 +1,125 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div id="product_tabs" class="{% if template.name == 'product' %}small-hide {% endif %}product-tab section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="tabs-outer">
+    <div class="desc-tab">
+      <div class="desc-tab-innr">
+        <button class="tablinks" onclick="openTab(event, 'description')">Description</button>
+        <button class="tablinks" onclick="openTab(event, 'additional_info')">Additional Information</button>
+        <button class="tablinks" onclick="openTab(event, 'reviews')">Reviews(0)</button>
+      </div>
+    </div>
+    
+    <div id="description" class="tabcontent">
+      {{ product.description }}
+    </div>
+    
+    <div id="additional_info" class="tabcontent" style="display: none;">
+      {{ section.settings.additional_info }}
+    </div>
+    
+    <div id="reviews" class="tabcontent" style="display: none;">
+     reviews show here...
+    </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Tab",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "additional_info",
+      "label": "Additional Info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Tab"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+
+
+#product_tabs .desc-tab button.tablinks {
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    background: unset;
+    border: unset;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 10px;
+}
+#product_tabs .desc-tab button.tablinks.active {
+    font-weight: 700;
+    border-bottom: 2px solid #000000;
+}
+#product_tabs .tabcontent, #product_tabs .tabcontent p {
+    line-height: 16px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+{% endstylesheet %}
+  
+<script>
+  function openTab(event, tabName) {
+    var tabcontents = document.getElementsByClassName("tabcontent");
+    for (var i = 0; i < tabcontents.length; i++) {
+      tabcontents[i].style.display = "none";
+    }
+
+    var tablinks = document.getElementsByClassName("tablinks");
+    for (var i = 0; i < tablinks.length; i++) {
+      tablinks[i].classList.remove("active");
+    }
+
+    document.getElementById(tabName).style.display = "block";
+    event.currentTarget.classList.add("active");
+  }
+
+  document.getElementById("description").style.display = "block";
+  document.querySelector(".tablinks:first-child").classList.add("active");
+</script>

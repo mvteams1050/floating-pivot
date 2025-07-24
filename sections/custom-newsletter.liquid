@@ -1,0 +1,161 @@
+<div class="custom-newsletter-form page-width">
+  {%- form 'customer', id: 'CustomNewsletterForm', class: 'custom-newsletter-form-fields' -%}
+    {% if section.settings.title != blank %}
+      <h2>{{ section.settings.title }}</h2>
+    {% endif %}
+    <div class="info">
+      <input
+        type="text"
+        name="contact[tags]"
+        value="newsletter"
+        hidden
+      >
+      <input
+        type="text"
+        name="contact[first_name]"
+        placeholder="Name"
+        class="field__input"
+        required
+      >
+      <input
+        type="email"
+        name="contact[email]"
+        placeholder="Enter Email"
+        class="field__input"
+        required
+        autocorrect="off"
+        autocapitalize="off"
+        autocomplete="email"
+      >
+    </div>
+    <input type="submit" value="Submit" class="submit-button">
+    
+    {%- if form.errors -%}
+      <small class="form__message form__message--error">
+        {{ form.errors.translated_fields.email | capitalize }}
+        {{ form.errors.messages.email }}
+      </small>
+    {%- endif -%}
+    
+    {%- if form.posted_successfully? -%}
+      <h3 class="form__message form__message--success">
+        {{ 'newsletter.success' | t }}
+      </h3>
+    {%- endif -%}
+  {%- endform -%}
+</div>
+
+<style>
+  .shopify-section:last-child {
+    background-image: url('/cdn/shop/files/cycle_large.svg?v=1690366224');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+  }
+
+  .custom-newsletter-form-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .custom-newsletter-form-fields h2 {
+    color: #000;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0;
+    margin: 0 0 50px;
+    font-family: DejaVu Sans, sans-serif;
+  }
+
+  .custom-newsletter-form-fields input[type='text'],
+  .custom-newsletter-form-fields input[type='email'] {
+    border-radius: 30px;
+    background: #f6f6f6;
+    height: 50px;
+    width: 100%;
+    padding-left: 22px;
+    border: 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  .custom-newsletter-form-fields input.field__input:focus {    
+    padding: unset;
+    padding-left: 22px;
+  }
+
+  .custom-newsletter-form-fields input::placeholder {
+    color: #000000;
+    opacity: 1;
+    font-family: DejaVu Sans, sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 1200px) {
+    .custom-newsletter-form-fields input[type='text'],
+    .custom-newsletter-form-fields input[type='email'] {
+      padding: 17px 24px 16px 24px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .custom-newsletter-form-fields input[type='text'],
+    .custom-newsletter-form-fields input[type='email'] {
+      padding: 17px 24px 16px 24px;
+    }
+
+    .custom-newsletter-form-fields .info {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  .custom-newsletter-form-fields .info {
+    display: flex;
+    gap: 26px;
+    width: 826px;
+  }
+
+  .custom-newsletter-form-fields input[type='submit'] {
+    border-radius: 25px;
+    background: #000;
+    padding: 13px 30px 12px;
+    color: #fff;
+    width: 400px;
+    margin-top: 40px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: normal;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Newsletter",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Newsletter"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Newsletter",
+      "category": "FORM"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

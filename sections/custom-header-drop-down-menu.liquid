@@ -1,0 +1,277 @@
+<style>
+.custom_menubar .navbar_wrapper {
+    background-color: {{ section.settings.menubar_bg_color }};
+    color: {{ section.settings.menu_color }};
+    padding: 8px;
+}
+.custom_menubar .custom_menu_bar .custom_menu_list {
+    display: flex;
+    gap: 45px;
+    justify-content: center;
+}
+.custom_menubar a {
+    color: {{ section.settings.menu_color }};
+}
+.custom_menubar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.custom_menubar li {
+    position: relative;
+}
+.custom_menubar .custom_menu_list .custom_menu_item .custom_menu_link {
+    font-family: DejaVu Sans, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 25px;
+    text-decoration: none;
+    padding-bottom: 14px;
+}
+.custom_menubar li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: {{ section.settings.menubar_bg_color }};
+}
+.custom_menubar .custom_menu_list .custom_menu_item .custom_menu_sublist {
+    min-width: 245px;
+    background: #f6f6f6;
+    margin-top: 8px;
+    z-index: 9;
+    padding-bottom: 12px;
+    border-top: 3px solid #f44437;
+}
+.custom_menubar .custom_menu_list .custom_menu_item .custom_menu_sublist li {
+    padding: 0 18px;
+}
+.custom_menubar .custom_menu_list .custom_menu_item .custom_menu_sublist li .custom_menu_sublink {
+    color: #0a0a0a;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding-top: 12px;
+    padding-bottom: 0;
+    display: block;
+}
+.custom_menubar .custom_menu_list .custom_menu_item .custom_menu_sublist li .custom_menu_sublink:hover {
+    color: #f44437;
+}
+.custom_menubar .menu-toggle {
+    display: none;
+    background-color: {{ section.settings.menubar_bg_color }};
+    color: {{ section.settings.menu_color }};    
+    padding: 2px 7px 0px;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    width: fit-content;
+    height: 33px;
+}
+.custom_menubar .chevron {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 20px;
+    transform: rotate(-90deg);
+    margin-left: 10px;
+}
+@media (min-width: 769px) {
+  .custom_menubar li.custom_menu_item:hover > ul {
+      display: block!important;
+  }
+}
+@media (max-width: 768px) {
+  .custom_menubar .desktop-only {
+    display: none;
+  }
+  .custom_menubar .custom_menu_bar .custom_menu_list {
+    flex-direction: column;
+    display: none;
+  }
+  .custom_menubar.active .custom_menu_bar .custom_menu_list {
+    display: flex;
+  }
+  .custom_menubar .menu-toggle {
+    display: block;
+  }
+  .custom_menubar .chevron {
+    display: block;
+  }
+  .custom_menubar .chevron.rotate {
+    transform: rotate(90deg);
+  }
+  .custom_menubar .custom_menu_bar .custom_menu_list {
+    gap: 0;
+  }
+  .custom_menubar .custom_menu_bar .custom_menu_list li.custom_menu_item {
+    border-bottom: 1px solid #444;
+  }
+  .custom_menubar .custom_menu_bar .custom_menu_list li.custom_menu_item:last-child {
+    border-bottom: 0;
+  }
+  .custom_menubar .custom_menu_list .custom_menu_item .custom_menu_link {
+    font-size: 15px;
+    line-height: 25px;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+  }
+  .custom_menubar .custom_menu_list .custom_menu_item .custom_menu_sublist {
+    position: unset;
+    margin-top: 0;
+  }
+  .custom_menubar .custom_menu_list .custom_menu_item .custom_menu_sublist li .custom_menu_sublink {
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+</style>
+
+<div class="navbar_wrapper {% if section.settings.menubar_show_on == 'desktop-only' %}desktop-only{% elsif section.settings.menubar_show_on == 'mobile-only' %}mobile-only{% else %}both{% endif %}">
+  <div class="page-width">
+    <span class="menu-toggle navbar-toggler-icon">
+      <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+      <svg fill="#ffffff" width="28px" height="28px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+        <g id="SVGRepo_iconCarrier"> <title>bars</title> <path d="M2 8.749h28c0.414 0 0.75-0.336 0.75-0.75s-0.336-0.75-0.75-0.75v0h-28c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0zM30 15.25h-28c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h28c0.414 0 0.75-0.336 0.75-0.75s-0.336-0.75-0.75-0.75v0zM30 23.25h-28c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h28c0.414 0 0.75-0.336 0.75-0.75s-0.336-0.75-0.75-0.75v0z"/> </g>
+      </svg>
+    </span>
+    <nav class="custom_menu_bar">
+      <ul class="custom_menu_list">
+        {% for link in linklists[section.settings.choose_menu].links %}
+          <li class="custom_menu_item">
+            <a href="{{ link.url }}" class="custom_menu_link">
+              <span>{{ link.title }}</span>
+              {% if link.links %}
+                <span class="chevron">&lsaquo;</span>
+              {% endif %}
+            </a>
+            {% if link.links %}
+              <ul class="custom_menu_sublist">
+                {% for child_link in link.links %}
+                  <li class="custom_menu_item custom_menu_subitem">
+                    <a href="{{ child_link.url }}" class="custom_menu_link custom_menu_sublink">{{ child_link.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var menuToggle = document.querySelector(".custom_menubar .menu-toggle");
+  var menuBar = document.querySelector(".custom_menubar");
+  var menuList = document.querySelector(".custom_menubar .custom_menu_list");
+  var menuItems = document.querySelectorAll(".custom_menubar .custom_menu_item");
+
+  function toggleMenu() {
+    menuBar.classList.toggle("active");
+    if (menuBar.classList.contains("active")) {
+      menuList.style.display = "flex";
+    } else {
+      setTimeout(function() {
+        menuList.style.display = "none";
+      }, 300);
+    }
+  }
+
+  menuToggle.addEventListener("click", toggleMenu);
+
+  window.addEventListener("resize", function() {
+    if (window.innerWidth > 768) {
+      menuList.style.display = "flex";
+    } else if (!menuBar.classList.contains("active")) {
+      menuList.style.display = "none";
+    }
+  });
+
+  function toggleSubmenu(event) {
+    if (window.innerWidth <= 768) {
+      var sublist = this.querySelector(".custom_menu_sublist");
+      var chevron = this.querySelector(".chevron");
+      if (sublist) {
+        if (sublist.style.display === "block") {
+          sublist.style.display = "none";
+          if (chevron) {
+            chevron.classList.remove("rotate");
+          }
+        } else {
+          sublist.style.display = "block";
+          if (chevron) {
+            chevron.classList.add("rotate");
+          }
+        }
+      }
+    }
+  }
+
+  menuItems.forEach(function(item) {
+    var sublist = item.querySelector(".custom_menu_sublist");
+    if (sublist) {
+      item.addEventListener("click", toggleSubmenu);
+    }
+  });
+});
+
+</script>
+
+{% schema %}
+  {
+    "name": "Menu Bar",
+    "tag": "section",
+    "class": "custom_menubar",
+    "settings": [
+      {
+        "type": "select",
+        "id": "menubar_show_on",
+        "label": "Menubar Show on",
+        "options": [
+          {
+            "value": "desktop-only",
+            "label": "Desktop Only"
+          },
+          {
+            "value": "mobile-only",
+            "label": "Mobile Only"
+          },
+          {
+            "value": "both",
+            "label": "Both"
+          }
+        ],
+        "default": "both"
+      },
+      {
+        "type": "color",
+        "id": "menubar_bg_color",
+        "label": "Menubar Background Color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "menu_color",
+        "label": "Menu Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "link_list",
+        "id": "choose_menu",
+        "label": "Choose Menu"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Menu Bar"
+      }
+    ]
+  }
+{% endschema %}

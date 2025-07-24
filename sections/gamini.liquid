@@ -1,0 +1,91 @@
+<section class="custom-gemini-section">
+  <div class="custom-gemini-section__container page-width page-width-desktop">
+    <div class="custom-gemini-section__column">
+      {% if section.settings['gamini-small-img'] != blank %}
+        <img
+          class="custom-gemini-section__column-title"
+          src="{{ section.settings.gamini-small-img | img_url: 'large' }}"
+        >
+      {% endif %}
+      {% if section.settings.description != blank %}
+        <p class="custom-gemini-section__column-description">{{ section.settings.description }}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="custom-gemini-section-button">
+  <div class="custom-gemini-section-button__container page-width page-width-desktop">
+    {% if section.settings.button_url != blank %}
+      <a class="custom-gemini-section-button__button" href="{{ section.settings.button_url }}">
+        {{- section.settings.button_text -}}
+      </a>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+  .custom-gemini-section-button__button {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    padding: 14px 40px;
+    background-color: #000000;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 38px;
+    display: block;
+    width: max-content;
+    font-family: DejaVu Sans, sans-serif;
+  }
+
+  .custom-gemini-section-button {
+    margin-bottom: 75px;
+  }
+
+  .custom-gemini-section-button__container {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Gamini section",
+  "settings": [
+    {
+      "id": "gamini-small-img",
+      "type": "image_picker",
+      "label": "Heading 1"
+    },
+    {
+      "id": "description",
+      "type": "text",
+      "label": "Description"
+    },
+    {
+      "id": "button_text",
+      "type": "text",
+      "label": "Button Text"
+    },
+    {
+      "id": "button_url",
+      "type": "url",
+      "label": "Button URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gamini section",
+      "category": "ADVANCED LAYOUT"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,30 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+
+
+{% assign parent_collection_handle = collection.handle %}
+<div class="sub_collections">
+  <div class="page-width">
+    <ul class="collection-list grid grid--4-col-desktop grid--1-col-tablet-down" role="list">
+      {% for collection in collections %}
+        {% assign parent_collection = collection.metafields.custom.parent_collection.value %}
+        {% assign parent_collection_name = parent_collection.handle %}
+        {% if parent_collection_name == parent_collection_handle %}
+          <li
+            class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            {% render 'card-collection',
+              card_collection: collection,
+              media_aspect_ratio: section.settings.image_ratio,
+              columns: 3
+            %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
