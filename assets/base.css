@@ -3765,7 +3765,8 @@ a.custom-hero-section__top-button {
   padding: 15px 50px 24px;
   background-color: #EAF2F5;
   max-width: 1440px;
-  margin-bottom: 75px;
+  /* margin-bottom: 75px; */
+  margin-bottom: 10px;
 }
 
 section.custom-hero-section-top {
