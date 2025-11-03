@@ -35,6 +35,9 @@
     top: 100%;
     background-color: {{ section.settings.menubar_bg_color }};
 }
+.custom_menubar .custom_menu_list .custom_menu_item .custom_menu_sublist:empty {
+    display: none!important;
+}
 .custom_menubar .custom_menu_list .custom_menu_item .custom_menu_sublist {
     min-width: 245px;
     background: #f6f6f6;
@@ -79,6 +82,9 @@
 @media (min-width: 769px) {
   .custom_menubar li.custom_menu_item:hover > ul {
       display: block!important;
+  }
+  .custom_menubar li.custom_menu_item:hover > ul:empty {
+      display: none!important;
   }
 }
 @media (max-width: 768px) {
@@ -146,11 +152,11 @@
           <li class="custom_menu_item">
             <a href="{{ link.url }}" class="custom_menu_link">
               <span>{{ link.title }}</span>
-              {% if link.links %}
+              {% if link.links != blank %}
                 <span class="chevron">&lsaquo;</span>
               {% endif %}
             </a>
-            {% if link.links %}
+            {% if link.links != blank %}
               <ul class="custom_menu_sublist">
                 {% for child_link in link.links %}
                   <li class="custom_menu_item custom_menu_subitem">

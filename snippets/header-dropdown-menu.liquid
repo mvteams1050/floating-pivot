@@ -5,7 +5,7 @@
   {% render 'header-dropdown-menu' %}
 {% endcomment %}
 
-<nav class="header__inline-menu {% if menu_hide_on_desktop == true %}desktop-hide{% endif %}">
+<nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
       <li>
@@ -23,7 +23,7 @@
                 >
                   {{- link.title | escape -}}
                 </span>
-                {% render 'icon-caret' %}
+                {{- 'icon-caret.svg' | inline_asset_content -}}
               </summary>
               <ul
                 id="HeaderMenu-MenuList-{{ forloop.index }}"
@@ -51,7 +51,7 @@
                           class="header__menu-item link link--text list-menu__item focus-inset caption-large"
                         >
                           <span>{{ childlink.title | escape }}</span>
-                          {% render 'icon-caret' %}
+                          {{- 'icon-caret.svg' | inline_asset_content -}}
                         </summary>
                         <ul
                           id="HeaderMenu-SubMenuList-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
