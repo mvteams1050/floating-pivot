@@ -3770,7 +3770,8 @@ a.custom-hero-section__top-button {
 }
 
 section.custom-hero-section-top {
-    margin-top: 40px;
+    /* margin-top: 40px; */
+    margin-top: 10px;
 }
 
 .custom-newsletter-form-fields ::placeholder{
