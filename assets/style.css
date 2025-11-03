@@ -914,5 +914,5 @@ ul.list-unstyled.list-social.footer__list-social {
 
 
 .countries li a{
-  color : #000;
+  color : #000 !important;
 }
