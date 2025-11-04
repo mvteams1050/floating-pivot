@@ -1,1 +1,74 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","blocks":{"image_VyQzfC":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/mtb-logo-white.png","image_width":100,"alignment":"","image_link":"\/","footer-main-description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."}},"link_list_jGJLwa":{"type":"link_list","settings":{"heading":"Quick links","menu":"footer"}},"link_list_P8nhar":{"type":"link_list","settings":{"heading":"Most Sell","menu":"most-sell"}},"text_4VXDkj":{"type":"text","settings":{"heading":"Get in Touch","subtext":"<p><a href=\"https:\/\/goo.gl\/maps\/AvvUbUboxe1YzzFG6\" target=\"_blank\" title=\"https:\/\/goo.gl\/maps\/AvvUbUboxe1YzzFG6\">The Floating Pivot LLC,<\/a><\/p><p><a href=\"https:\/\/goo.gl\/maps\/AvvUbUboxe1YzzFG6\" target=\"_blank\" title=\"https:\/\/goo.gl\/maps\/AvvUbUboxe1YzzFG6\">P.O.Box 515000, UAE<\/a><\/p><p><a href=\"tel:+971 508 108 718\" title=\"tel:1508108718\">Phone: +971 508 108 718<\/a><\/p>"}}},"block_order":["image_VyQzfC","link_list_jGJLwa","link_list_P8nhar","text_4VXDkj"],"settings":{"color_scheme":"scheme-1","newsletter_enable":false,"newsletter_heading":"Subscribe to our emails","enable_follow_on_shop":true,"show_social":true,"enable_country_selector":true,"enable_language_selector":false,"payment_enable":true,"show_policy":false,"margin_top":48,"padding_top":36,"padding_bottom":36}}},"order":["footer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "image_VyQzfC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/mtb-logo-white.png",
+            "image_width": 100,
+            "alignment": "",
+            "image_link": "/",
+            "footer-main-description": "Your apothecary to bicycles and bicycle components in the UAE!"
+          }
+        },
+        "link_list_jGJLwa": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "link_list_P8nhar": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Most Sell",
+            "menu": "most-sell"
+          }
+        },
+        "text_4VXDkj": {
+          "type": "text",
+          "settings": {
+            "heading": "Get in Touch",
+            "subtext": "<p><a href=\"https://goo.gl/maps/AvvUbUboxe1YzzFG6\" target=\"_blank\" title=\"https://goo.gl/maps/AvvUbUboxe1YzzFG6\">The Floating Pivot LLC,</a></p><p><a href=\"https://goo.gl/maps/AvvUbUboxe1YzzFG6\" target=\"_blank\" title=\"https://goo.gl/maps/AvvUbUboxe1YzzFG6\">P.O.Box 515000, UAE</a></p><p><a href=\"tel:+971 508 108 718\" title=\"tel:1508108718\">Phone: +971 508 108 718</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_VyQzfC",
+        "link_list_jGJLwa",
+        "link_list_P8nhar",
+        "text_4VXDkj"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 48,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
