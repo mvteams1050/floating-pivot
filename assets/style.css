@@ -433,6 +433,9 @@ section#shopify-section-template--24123395735840__main .page_section .page-width
     color: #000;
     list-style: circle;
 }
+.privacy-policy .page_section .rte p, .privacy-policy p {
+    color: #000;
+}
 .collection-hero .collection-hero__inner .collection-hero__title {
     text-align: center;
   font-weight: 600;
