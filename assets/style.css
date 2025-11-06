@@ -423,13 +423,15 @@ section#shopify-section-template--24123395735840__main .page_section .page-width
     box-shadow: 0px 3px 6px #e2e2e2b0;
     border: 1px solid #eaeaea;
 }
-.privacy-policy .page_section .rte p, .privacy-policy ul li{
+.privacy-policy .page_section .rte p, .privacy-policy ul li {
     line-height: 25px;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
-    font-size: 14px;
+    font-size: 15x;
     margin-top: 0;
     font-family: 'Roboto Slab';
+    color: #000;
+    list-style: circle;
 }
 .collection-hero .collection-hero__inner .collection-hero__title {
     text-align: center;
