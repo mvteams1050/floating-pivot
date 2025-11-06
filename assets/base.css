@@ -3641,7 +3641,7 @@ p.announcement-bar__message.h5 span a {
 .custom-hero-section__column .custom-hero-section__left-block--title{
   margin: 0;
   color: #000;
-  font-family: 'DejaVu Sans', sans-serif;
+  /* font-family: 'DejaVu Sans', sans-serif; */
   font-size: 24px;
   font-weight: 700;
   line-height: normal;
