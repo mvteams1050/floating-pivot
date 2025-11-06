@@ -3731,7 +3731,7 @@ section.custom-gemini-section {
 
 h1.custom-hero-section__top-title {
   color: #000;
-  font-family: 'DejaVu Sans', sans-serif;
+  /* font-family: 'DejaVu Sans', sans-serif; */
   font-size: 18px;
   font-weight: 700;
   line-height: normal;
