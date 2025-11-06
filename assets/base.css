@@ -3661,7 +3661,7 @@ input:focus-visible {
 
 .custom-hero-section__column:first-child .custom-hero-section__left-block--title{
   color: #000;
-  font-family: 'DejaVu Sans', sans-serif;
+  /* font-family: 'DejaVu Sans', sans-serif; */
   font-size: 26px;
   font-weight: 700;
   line-height: normal;
