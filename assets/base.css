@@ -2451,7 +2451,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 .header__heading-link {
   display: inline-block;
-  padding: 0rem;
+  padding: .2rem;
   text-decoration: none;
   word-break: break-word;
 }
