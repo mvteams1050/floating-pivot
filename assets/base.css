@@ -3862,6 +3862,9 @@ transform: translateY(-50%);
   .custom-hero-section-top__container {
     padding: 12px 20px 12px;
   }
+  p.custom-hero-section__top-description {
+      margin: 8px 0 10px;
+  }
 }
 
 .copyright__content:first-child:hover a{
