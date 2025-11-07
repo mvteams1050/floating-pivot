@@ -3577,6 +3577,7 @@ p.announcement-bar__message.h5 span a {
   }
   .custom-categories-single-main h3 {
     font-size: 18px!important;
+        margin-top: 6px;
   }
   .custom-newsletter-form-fields input[type='submit'] {
     font-size: 16px!important;
