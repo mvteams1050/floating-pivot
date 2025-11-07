@@ -3856,14 +3856,22 @@ transform: translateY(-50%);
   .custom-hero-section-top__container.page-width.page-width-desktop {
     margin-bottom: 45px;
   }
+  
 }
 
 @media (max-width: 414px) {
   .custom-hero-section-top__container {
     padding: 12px 20px 12px;
   }
-  p.custom-hero-section__top-description {
+ .custom-hero-section-top__container  p.custom-hero-section__top-description {
       margin: 8px 0 10px;
+              font-size: 12px;
+  }
+  .custom-hero-section-top__container  h1.custom-hero-section__top-title {
+    font-size: 16px;
+  }
+   .custom-hero-section-top__container a.custom-hero-section__top-button {
+      font-size: 12px;
   }
 }
 
