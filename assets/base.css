@@ -3591,7 +3591,8 @@ p.announcement-bar__message.h5 span a {
     background-size: cover;
   }
   body p.announcement-bar__message.h5, body p.announcement-bar__message.h5 span {
-    font-size: 13px;
+      font-size: 11px;
+      letter-spacing: 0;
   }
   body .custom-hero-section__column:first-child .custom-hero-section__left-block--button {
     margin-top: 0px;
