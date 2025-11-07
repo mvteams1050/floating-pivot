@@ -3857,6 +3857,11 @@ transform: translateY(-50%);
   .custom-hero-section-top__container.page-width.page-width-desktop {
     margin-bottom: 45px;
   }
+  p.custom-gemini-section__column-description {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 18px 0 0;
+  }
   
 }
 
