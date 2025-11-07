@@ -588,7 +588,8 @@ color: #f44437;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 32%;
+    /* width: 32%; */
+    width: 21.5%;
     gap: 2rem;
 }
 
