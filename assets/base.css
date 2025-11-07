@@ -3860,7 +3860,7 @@ transform: translateY(-50%);
 
 @media (max-width: 414px) {
   .custom-hero-section-top__container {
-    padding: 15px 20px 24px;
+    padding: 12px 20px 12px;
   }
 }
 
