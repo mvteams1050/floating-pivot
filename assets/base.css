@@ -3547,9 +3547,14 @@ p.announcement-bar__message.h5 span a {
 
 .custom-hero-section__container{
   display: grid;
-  grid-template-columns: 723px 1fr;
+  /* grid-template-columns: 723px 1fr;
+  column-gap: 49px; */
   grid-template-rows: 1fr 1fr;
-  column-gap: 49px;
+  grid-template-columns: 54% 43.8%;
+  column-gap: 30px;
+}
+.custom-hero-section .custom-hero-section__container .custom-hero-section__column:nth-child(2) {
+  margin-bottom: 30px;
 }
 
 @media(max-width: 1200px){
