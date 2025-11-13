@@ -3707,7 +3707,7 @@ input:focus-visible {
 }
 
 .custom-hero-section__column:first-child .custom-hero-section__left-block--button{
-    margin-top: 2px;
+    margin-top: 7px;
     margin-bottom: 0px;
     display: block;
     width: max-content;
