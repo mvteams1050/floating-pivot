@@ -678,10 +678,10 @@ ul.list-unstyled.list-social.footer__list-social {
     padding-left: 0;
 }
 .product-grid .badge.color-scheme-3 {
-    background: #A9A9A9;
+    background: #606060;
 }
 .product-grid .badge.color-scheme-3:before {
-    border-right-color: #A9A9A9;
+    border-right-color: #606060;
 }
 
 
