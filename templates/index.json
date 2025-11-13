@@ -199,6 +199,42 @@
           "settings": {
             "icon_image": "shopify://shop_images/Spank-Black_large_1.png"
           }
+        },
+        "slide_aGt6wp": {
+          "type": "slide",
+          "settings": {
+            "icon_image": "shopify://shop_images/thumb_E-Thirteen.png"
+          }
+        },
+        "slide_xH6w34": {
+          "type": "slide",
+          "settings": {
+            "icon_image": "shopify://shop_images/DyedBro_Black.png"
+          }
+        },
+        "slide_ndiTFM": {
+          "type": "slide",
+          "settings": {
+            "icon_image": "shopify://shop_images/AMP_Logo.png"
+          }
+        },
+        "slide_AJejdn": {
+          "type": "slide",
+          "settings": {
+            "icon_image": "shopify://shop_images/Commencal_New.png"
+          }
+        },
+        "slide_gDrUpi": {
+          "type": "slide",
+          "settings": {
+            "icon_image": "shopify://shop_images/Fox_Racing_Black.png"
+          }
+        },
+        "slide_pQbgiK": {
+          "type": "slide",
+          "settings": {
+            "icon_image": "shopify://shop_images/RC_Logo_New.png"
+          }
         }
       },
       "block_order": [
@@ -212,7 +248,13 @@
         "fa4bc4a2-d43c-461c-9ba0-31198be0a00d",
         "b7d535cf-da0c-4e76-9f45-cce860e17319",
         "fb0f4ff6-8383-44c5-a4a1-ed89190b58c8",
-        "190954fd-ce2b-46aa-a411-0748e81c23ec"
+        "190954fd-ce2b-46aa-a411-0748e81c23ec",
+        "slide_aGt6wp",
+        "slide_xH6w34",
+        "slide_ndiTFM",
+        "slide_AJejdn",
+        "slide_gDrUpi",
+        "slide_pQbgiK"
       ],
       "settings": {}
     },
