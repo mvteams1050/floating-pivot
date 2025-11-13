@@ -3634,6 +3634,9 @@ p.announcement-bar__message.h5 span a {
   .custom-hero-section__column .custom-hero-section__left-block--title {
     font-size: 18px;
   }
+  .custom-hero-section .custom-hero-section__container .custom-hero-section__column:nth-child(2) {
+      margin-bottom: 0;
+  }
 }
 
 .custom-hero-section__column img{
