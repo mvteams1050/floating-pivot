@@ -677,6 +677,22 @@ h2.footer-block__heading.inline-richtext {
 ul.list-unstyled.list-social.footer__list-social {
     padding-left: 0;
 }
+.product-grid .badge.color-scheme-3 {
+    background: #A9A9A9;
+}
+.product-grid .badge.color-scheme-3:before {
+    border-right-color: #A9A9A9;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* MEDIA CSS */
 @media screen and (min-width: 750px){
