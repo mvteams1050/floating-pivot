@@ -3688,7 +3688,7 @@ input:focus-visible {
 .custom-hero-section__right-column-text{
   display: flex;
   justify-content: space-between;
-  margin-top: 7px;
+  margin-top: 10px;
   align-items: center;
 }
 
