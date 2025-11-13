@@ -3872,8 +3872,8 @@ transform: translateY(-50%);
   .custom-hero-section-top__container {
     padding: 12px 20px 12px;
   }
- .custom-hero-section-top__container  p.custom-hero-section__top-description {
-      margin: 8px 0 10px;
+ .custom-hero-section-top__container p.custom-hero-section__top-description {
+      margin: 6px 0 5px;
               font-size: 12px;
   }
   .custom-hero-section-top__container  h1.custom-hero-section__top-title {
